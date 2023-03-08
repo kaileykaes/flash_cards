@@ -18,4 +18,8 @@ RSpec.describe Turn do
   it 'knows if guess is correct' do 
     expect(@turn.correct?).to eq(true)
   end
+
+  it 'gives feedback' do 
+    expect(@turn.feedback).to eq("Correct!")
+  end
 end
