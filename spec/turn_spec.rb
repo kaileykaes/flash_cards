@@ -14,4 +14,8 @@ RSpec.describe Turn do
     expect(@turn.card).to eq(@card)
     expect(@turn.guess).to eq("Juneau")
   end
+
+  it 'knows if guess is correct' do 
+    expect(@turn.correct?).to eq(true)
+  end
 end
