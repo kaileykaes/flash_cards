@@ -16,4 +16,12 @@ RSpec.describe Deck do
   it 'has cards' do
     expect(@deck.cards).to eq([@card_1, @card_2, @card_3])
   end
+
+  it 'counts cards' do 
+    expect(@deck.count).to eq(3)
+  end
+
+  it 'finds cards of a category' do
+    expect(@deck.cards_in_category(:STEM)).to eq([@card_2, @card_3])
+  end
 end
