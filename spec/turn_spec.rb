@@ -24,6 +24,6 @@ RSpec.describe Turn do
 
   it 'gives feedback' do 
     expect(@turn.feedback).to eq("Correct!")
-    expect(@turn2.feedback).to eq("False.")
+    expect(@turn2.feedback).to eq("Incorrect.")
   end
 end
