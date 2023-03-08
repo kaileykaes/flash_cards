@@ -8,6 +8,15 @@ class Turn
   end
 
   def correct?
-    true if guess == card.answer
+    if guess == card.answer
+      true
+    else 
+      false
+    end
+  end
+
+  def feedback
+    return "Correct!" if correct?
+    return "False." if correct? == false
   end
 end
