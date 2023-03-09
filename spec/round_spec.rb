@@ -30,4 +30,9 @@ RSpec.describe Round do
     expect(@new_turn.correct?).to be true
     expect(@round.current_card).to eq(@card_2)
   end
+
+  it 'knows how many turns are correct' do
+    @new_turn = @round.take_turn("Juneau")
+    expect(@round.number_correct).to eq(1)
+  end
 end
