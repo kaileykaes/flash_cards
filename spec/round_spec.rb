@@ -14,8 +14,18 @@ RSpec.describe Round do
 
   it 'exists and has attributes' do
     expect(@round).to be_a(Round)
-    expect(@round.current_card).to eq(@deck.cards[0])
+    expect(@round.turns).to eq([])
+    expect(@round.deck).to be_a(Deck)
+  end
+  
+  it '#current_card' do
+  expect(@round.current_card).to eq(@deck.cards[0])
   end
 
-
+  it 'takes turns' do 
+    @new_turn = @round.take_turn("Juneau")
+    expect(@new_turn).to be_a(Turn)
+    expect(@new_turn.correct?).to be true
+    expect(@round.turns).to eq([@new_turn])
+  end
 end
