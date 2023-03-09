@@ -13,6 +13,6 @@ class Round
 
   def take_turn(guess)
     turns << Turn.new(guess, current_card)
-    turns[0]
+    turns.last
   end
 end
