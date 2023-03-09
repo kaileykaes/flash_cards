@@ -13,6 +13,7 @@ class Round
 
   def take_turn(guess)
     turns << Turn.new(guess, current_card)
+    deck.cards.shift && deck.cards << current_card
     turns.last
   end
 end
