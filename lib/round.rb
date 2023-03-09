@@ -16,4 +16,12 @@ class Round
     deck.cards.shift && deck.cards << current_card
     turns.last
   end
+
+  def number_correct 
+    correct = 0
+    turns.each do |turn|
+       correct += 1 if turn.correct?
+    end
+    correct
+  end
 end
