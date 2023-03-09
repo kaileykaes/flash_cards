@@ -12,7 +12,10 @@ RSpec.describe Round do
     @round = Round.new(@deck)
   end
 
-  it 'exists' do
-    expect(@deck).to be_a(Deck)
+  it 'exists and has attributes' do
+    expect(@round).to be_a(Round)
+    expect(@round.current_card).to eq(@deck.cards[0])
   end
+
+
 end
