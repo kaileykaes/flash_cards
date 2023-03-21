@@ -48,6 +48,7 @@ class Round
       category_turns << turn if turn.card.category == category
     end
     (cat_correct * 100).to_f / category_turns.count
+    require 'pry'; binding.pry
   end
 end
 
